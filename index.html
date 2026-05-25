@@ -2,166 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Example Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Christian Goblin</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
     }
 
-    body {
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
+    body{
+      background: linear-gradient(135deg, #111, #1d1d1d, #2a2a2a);
+      color:white;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px 20px;
     }
 
-    header {
-      background: #222;
-      color: white;
-      padding: 20px;
+    .container{
+      width:100%;
+      max-width:700px;
+      text-align:center;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:20px;
+      padding:40px 30px;
+      backdrop-filter: blur(10px);
+      box-shadow:0 0 25px rgba(0,0,0,0.5);
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .profile-img{
+      width:140px;
+      height:140px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #00ffcc;
+      margin-bottom:20px;
     }
 
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 20px;
+    h1{
+      font-size:3rem;
+      margin-bottom:10px;
+      color:#00ffcc;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
+    p{
+      color:#ccc;
+      margin-bottom:30px;
+      font-size:1.1rem;
     }
 
-    .hero {
-      height: 80vh;
-      background: linear-gradient(135deg, #4f46e5, #06b6d4);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
+    .links{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
+    .links a{
+      text-decoration:none;
+      color:white;
+      background:#222;
+      padding:16px;
+      border-radius:12px;
+      font-size:1.1rem;
+      transition:0.3s ease;
+      border:1px solid rgba(255,255,255,0.08);
     }
 
-    .hero p {
-      max-width: 600px;
-      margin-bottom: 20px;
+    .links a:hover{
+      transform:translateY(-3px) scale(1.02);
+      background:#00ffcc;
+      color:#111;
+      font-weight:bold;
     }
 
-    .btn {
-      background: white;
-      color: #4f46e5;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+    footer{
+      margin-top:30px;
+      color:#777;
+      font-size:0.9rem;
     }
 
-    .btn:hover {
-      background: #ddd;
-    }
+    @media(max-width:600px){
+      h1{
+        font-size:2.2rem;
+      }
 
-    .features {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #4f46e5;
-    }
-
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      .links a{
+        font-size:1rem;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <nav>
-      <h2>MySite</h2>
+  <div class="container">
 
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Replace this image with your own -->
+    <img 
+      class="profile-img"
+      src="https://via.placeholder.com/140"
+      alt="Christian Goblin"
+    />
 
-  <section class="hero">
-    <h1>Welcome to My Website</h1>
+    <h1>Christian Goblin</h1>
+
     <p>
-      This is a simple responsive HTML and CSS example website.
-      You can customize it however you want.
+      Content Creator • Streamer • Goblin Energy
     </p>
 
-    <a href="#" class="btn">Get Started</a>
-  </section>
+    <div class="links">
 
-  <section class="features">
+      <a href="https://www.instagram.com/hello.viewers.2026/" target="_blank">
+        📸 Instagram (hello.viewers.2026)
+      </a>
 
-    <div class="card">
-      <h3>Fast</h3>
-      <p>
-        Lightweight and responsive design for all devices.
-      </p>
+      <a href="https://www.instagram.com/christian_goblin?igsh=MWMxdm03bWx2N2tneg%3D%3D" target="_blank">
+        👹 Instagram (christian_goblin)
+      </a>
+
+      <a href="https://www.tiktok.com/@christiangoblin" target="_blank">
+        🎵 TikTok
+      </a>
+
+      <a href="https://www.youtube.com/@christian_goblin?app=desktop&sub_confirmation=1" target="_blank">
+        ▶️ YouTube
+      </a>
+
+      <a href="https://m.twitch.tv/christian_goblin/home" target="_blank">
+        🎮 Twitch
+      </a>
+
+      <a href="https://www.patreon.com/profile/creators?u=152523171&utm_campaign=creatorshare_creator" target="_blank">
+        ❤️ Patreon
+      </a>
+
+      <a href="https://ko-fi.com/christiangoblin" target="_blank">
+        ☕ Ko-fi
+      </a>
+
+      <a href="https://cash.app/$TheChristianGoblin" target="_blank">
+        💸 Cash App
+      </a>
+
     </div>
 
-    <div class="card">
-      <h3>Modern</h3>
-      <p>
-        Clean layout with modern UI styling and gradients.
-      </p>
-    </div>
+    <footer>
+      © 2026 Christian Goblin
+    </footer>
 
-    <div class="card">
-      <h3>Easy</h3>
-      <p>
-        Simple structure that's beginner friendly and editable.
-      </p>
-    </div>
-
-  </section>
-
-  <footer>
-    <p>© 2026 MySite. All rights reserved.</p>
-  </footer>
+  </div>
 
 </body>
 </html>
