@@ -1,4 +1,256 @@
-function showMessage() {
-    alert("Christian Goblin Online");
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
+body{
+  font-family:Georgia, serif;
+
+  min-height:100vh;
+
+  background:
+    linear-gradient(135deg, #050505, #111111, #1a1a1a);
+
+  background-attachment:fixed;
+
+  color:#f3eee5;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:40px 20px;
+}
+
+.container{
+  width:100%;
+  max-width:720px;
+
+  background:rgba(8,8,8,0.82);
+
+  border:1px solid rgba(190,160,110,0.25);
+
+  border-radius:24px;
+
+  padding:45px 30px;
+
+  box-shadow:
+    0 0 40px rgba(0,0,0,0.7),
+    0 0 20px rgba(190,160,110,0.08);
+
+  backdrop-filter:blur(8px);
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.container::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:rgba(255,255,255,0.015);
+
+  pointer-events:none;
+}
+
+.content{
+  position:relative;
+  z-index:2;
+}
+
+.profile-frame{
+  width:200px;
+  height:200px;
+
+  margin:0 auto 20px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:12px;
+
+  border-radius:50%;
+
+  border:2px solid rgba(219,193,142,0.35);
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(219,193,142,0.12),
+      rgba(0,0,0,0.4)
+    );
+
+  box-shadow:
+    0 0 25px rgba(219,193,142,0.12),
+    inset 0 0 20px rgba(0,0,0,0.7);
+}
+
+.profile-img{
+  width:140px;
+  height:140px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:2px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 0 20px rgba(0,0,0,0.5);
+}
+
+h1{
+  font-size:3rem;
+
+  color:#dbc18e;
+
+  letter-spacing:2px;
+
+  margin-bottom:10px;
+
+  text-shadow:
+    0 0 12px rgba(219,193,142,0.2);
+}
+
+.divider{
+  width:240px;
+  max-width:90%;
+
+  margin:18px auto 24px;
+
+  opacity:0.8;
+}
+
+.tagline{
+  color:#b7afa0;
+
+  font-size:1.05rem;
+
+  line-height:1.7;
+
+  margin-bottom:35px;
+
+  letter-spacing:1px;
+}
+
+.links{
+  display:flex;
+  flex-direction:column;
+
+  gap:18px;
+}
+
+.links a{
+  text-decoration:none;
+
+  color:#f3eee5;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.72),
+      rgba(0,0,0,0.82)
+    ),
+    url("./assets/images/card-bg.png");
+
+  background-size:cover;
+  background-position:center;
+
+  border:1px solid rgba(190,160,110,0.18);
+
+  border-radius:14px;
+
+  padding:18px 20px;
+
+  transition:0.3s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.links a:hover{
+  transform:
+    translateY(-4px)
+    scale(1.01);
+
+  border-color:
+    rgba(219,193,142,0.45);
+
+  box-shadow:
+    0 0 18px rgba(219,193,142,0.12);
+
+  color:#fff7e8;
+}
+
+.link-content{
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  gap:12px;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.icon{
+  width:22px;
+  height:22px;
+
+  object-fit:contain;
+
+  opacity:0.9;
+}
+
+footer{
+  margin-top:40px;
+
+  color:#847a6b;
+
+  font-size:0.9rem;
+}
+
+.footer-divider{
+  width:230px;
+
+  margin-bottom:18px;
+
+  opacity:0.7;
+}
+
+@media(max-width:600px){
+
+  .container{
+    padding:35px 20px;
+  }
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  .profile-frame{
+    width:160px;
+    height:160px;
+  }
+
+  .profile-img{
+    width:110px;
+    height:110px;
+  }
+
+  .links a{
+    padding:16px;
+
+    font-size:0.95rem;
+  }
+
+}
