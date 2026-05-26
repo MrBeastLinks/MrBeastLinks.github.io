@@ -6,280 +6,373 @@
   <title>Christian Goblin</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Georgia, serif;
     }
 
     body{
+      font-family:Georgia, serif;
       min-height:100vh;
       background:
-        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
-        url("bg-texture.png");
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.92)),
+        url("hero-bg.png");
       background-size:cover;
       background-position:center;
-      color:#f1ede4;
+      background-attachment:fixed;
+      color:#f3eee5;
+
       display:flex;
       justify-content:center;
       align-items:center;
+
       padding:40px 20px;
     }
 
     .container{
       width:100%;
       max-width:720px;
-      padding:45px 35px;
-      border:1px solid rgba(201,168,103,0.25);
+
+      background:rgba(8,8,8,0.82);
+
+      border:1px solid rgba(190,160,110,0.25);
+
       border-radius:24px;
-      background:rgba(7,7,7,0.75);
-      backdrop-filter:blur(8px);
+
+      padding:45px 30px;
+
       box-shadow:
-        0 0 30px rgba(0,0,0,0.7),
-        0 0 10px rgba(201,168,103,0.15);
+        0 0 40px rgba(0,0,0,0.7),
+        0 0 20px rgba(190,160,110,0.08);
+
+      backdrop-filter:blur(8px);
+
+      text-align:center;
+
       position:relative;
+
       overflow:hidden;
     }
 
-    .hero-bg{
+    .container::before{
+      content:"";
+
       position:absolute;
       inset:0;
-      background:url("hero-bg.png");
+
+      background:url("card-bg.png");
       background-size:cover;
       background-position:center;
-      opacity:0.12;
-      z-index:0;
+
+      opacity:0.15;
+
+      pointer-events:none;
     }
 
     .content{
       position:relative;
       z-index:2;
-      text-align:center;
     }
 
-    .profile-wrapper{
-      width:180px;
-      height:180px;
-      margin:0 auto 25px;
+    .profile-frame{
+      width:200px;
+      height:200px;
+
+      margin:0 auto 20px;
+
       background:url("profile-frame.png");
       background-size:contain;
       background-repeat:no-repeat;
       background-position:center;
+
       display:flex;
       justify-content:center;
       align-items:center;
-      padding:18px;
+
+      padding:24px;
     }
 
     .profile-img{
-      width:120px;
-      height:120px;
+      width:125px;
+      height:125px;
+
       border-radius:50%;
+
       object-fit:cover;
+
       border:2px solid rgba(255,255,255,0.15);
-      filter:brightness(0.95);
     }
 
     h1{
       font-size:3rem;
+
+      color:#dbc18e;
+
       letter-spacing:2px;
+
       margin-bottom:10px;
-      color:#d8c08f;
-      text-shadow:0 0 10px rgba(216,192,143,0.25);
+
+      text-shadow:0 0 12px rgba(219,193,142,0.2);
     }
 
     .divider{
-      width:260px;
+      width:240px;
       max-width:90%;
+
       margin:18px auto 24px;
+
       opacity:0.8;
     }
 
     .tagline{
-      color:#bfb8aa;
+      color:#b7afa0;
+
       font-size:1.05rem;
+
       line-height:1.7;
+
       margin-bottom:35px;
+
       letter-spacing:1px;
     }
 
     .links{
       display:flex;
       flex-direction:column;
+
       gap:18px;
     }
 
     .links a{
-      position:relative;
       text-decoration:none;
-      color:#f3eee4;
-      padding:18px 20px;
-      border-radius:14px;
-      overflow:hidden;
-      transition:0.3s ease;
-      border:1px solid rgba(201,168,103,0.15);
+
+      color:#f3eee5;
+
       background:
-        linear-gradient(rgba(10,10,10,0.82), rgba(10,10,10,0.82)),
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
         url("card-bg.png");
+
       background-size:cover;
       background-position:center;
-      font-size:1.05rem;
-      letter-spacing:0.5px;
+
+      border:1px solid rgba(190,160,110,0.18);
+
+      border-radius:14px;
+
+      padding:18px 20px;
+
+      transition:0.3s ease;
+
+      position:relative;
+
+      overflow:hidden;
     }
 
     .links a:hover{
       transform:translateY(-4px) scale(1.01);
-      border-color:rgba(201,168,103,0.55);
-      box-shadow:0 0 18px rgba(201,168,103,0.18);
-      color:#fff4d7;
+
+      border-color:rgba(219,193,142,0.45);
+
+      box-shadow:0 0 18px rgba(219,193,142,0.12);
+
+      color:#fff7e8;
     }
 
-    .link-inner{
+    .link-content{
       display:flex;
-      align-items:center;
+
       justify-content:center;
+      align-items:center;
+
       gap:12px;
+
       position:relative;
+
       z-index:2;
     }
 
-    .link-icon{
+    .icon{
       width:22px;
       height:22px;
+
       object-fit:contain;
+
       opacity:0.9;
     }
 
     footer{
       margin-top:40px;
+
+      color:#847a6b;
+
       font-size:0.9rem;
-      color:#827868;
-      text-align:center;
     }
 
     .footer-divider{
-      width:220px;
-      margin:0 auto 18px;
-      opacity:0.65;
+      width:230px;
+
+      margin-bottom:18px;
+
+      opacity:0.7;
     }
 
     @media(max-width:600px){
 
       .container{
-        padding:35px 22px;
+        padding:35px 20px;
       }
 
       h1{
         font-size:2.2rem;
       }
 
-      .tagline{
-        font-size:0.95rem;
-      }
-
-      .links a{
-        font-size:0.95rem;
-        padding:16px;
-      }
-
-      .profile-wrapper{
-        width:150px;
-        height:150px;
+      .profile-frame{
+        width:160px;
+        height:160px;
       }
 
       .profile-img{
         width:100px;
         height:100px;
       }
+
+      .links a{
+        padding:16px;
+        font-size:0.95rem;
+      }
+
     }
+
   </style>
 </head>
+
 <body>
 
   <div class="container">
 
-    <div class="hero-bg"></div>
-
     <div class="content">
 
-      <div class="profile-wrapper">
-        <!-- Replace with your actual profile image -->
+      <div class="profile-frame">
+
+        <!-- CHANGE THIS IMAGE -->
         <img
           class="profile-img"
           src="profile.png"
           alt="Christian Goblin"
         />
+
       </div>
 
       <h1>Christian Goblin</h1>
 
       <img
         class="divider"
-        src="divider-cross.png"
+        src="divider-cross.PNG"
         alt=""
       />
 
       <p class="tagline">
-        Christian Creator • Streaming • Faith • Dark Aesthetic
+        Christian Creator • Streaming • Dark Faith Aesthetic
       </p>
 
       <div class="links">
 
         <a href="https://www.instagram.com/hello.viewers.2026/" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-cross.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-cross.png" alt="">
+
             <span>Instagram — hello.viewers.2026</span>
+
           </div>
+
         </a>
 
         <a href="https://www.instagram.com/christian_goblin?igsh=MWMxdm03bWx2N2tneg%3D%3D" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-thorns.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-thorns.PNG" alt="">
+
             <span>Instagram — christian_goblin</span>
+
           </div>
+
         </a>
 
         <a href="https://www.tiktok.com/@christiangoblin" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-dove.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-dove.PNG" alt="">
+
             <span>TikTok</span>
+
           </div>
+
         </a>
 
         <a href="https://www.youtube.com/@christian_goblin?app=desktop&sub_confirmation=1" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-shield.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-shield.PNG" alt="">
+
             <span>YouTube</span>
+
           </div>
+
         </a>
 
         <a href="https://m.twitch.tv/christian_goblin/home" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-crown.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-crown.png" alt="">
+
             <span>Twitch</span>
+
           </div>
+
         </a>
 
         <a href="https://www.patreon.com/profile/creators?u=152523171&utm_campaign=creatorshare_creator" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-pray.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-pray.PNG" alt="">
+
             <span>Patreon</span>
+
           </div>
+
         </a>
 
         <a href="https://ko-fi.com/christiangoblin" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-bible.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-bible.PNG" alt="">
+
             <span>Ko-fi</span>
+
           </div>
+
         </a>
 
         <a href="https://cash.app/$TheChristianGoblin" target="_blank">
-          <div class="link-inner">
-            <img class="link-icon" src="icon-cross.png" alt="">
+
+          <div class="link-content">
+
+            <img class="icon" src="icon-cross.png" alt="">
+
             <span>Cash App</span>
+
           </div>
+
         </a>
 
       </div>
@@ -288,7 +381,7 @@
 
         <img
           class="footer-divider"
-          src="divider-flourish.png"
+          src="divider-flourish.PNG"
           alt=""
         />
 
