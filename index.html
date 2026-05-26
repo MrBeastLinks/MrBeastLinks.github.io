@@ -1,397 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <meta charset="UTF-8" />
+<title>Christian Goblin</title>
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
 
-  <title>Christian Goblin</title>
+<style>
 
-  <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+body{
+    background:
+        linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.92)),
+        url("assets/bg-texture.png");
+    background-size:cover;
+    background-attachment:fixed;
+    color:#d6c3a3;
+    font-family:'Cormorant Garamond', serif;
+    min-height:100vh;
+    overflow-x:hidden;
+}
 
-    body{
-      font-family:Arial, Helvetica, sans-serif;
+.hero{
+    width:100%;
+    min-height:420px;
+    background:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.8)),
+        url("assets/hero-bg.png");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    border-bottom:1px solid rgba(212,184,135,.2);
+}
 
-      min-height:100vh;
+.hero-inner{
+    max-width:700px;
+}
 
-      background:
-        radial-gradient(circle at top, #1b1b1b 0%, #090909 70%);
+.profile-frame{
+    width:180px;
+    height:180px;
+    margin:auto;
+    margin-bottom:25px;
+    background:url("assets/profile-frame.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    border-radius:50%;
+}
 
-      color:white;
+h1{
+    font-family:'Cinzel', serif;
+    font-size:3rem;
+    letter-spacing:4px;
+    margin-bottom:10px;
+    text-shadow:0 0 18px rgba(255,255,255,.12);
+}
 
-      display:flex;
-      justify-content:center;
-      align-items:center;
+.subtitle{
+    font-size:1.2rem;
+    opacity:.85;
+    letter-spacing:1px;
+}
 
-      padding:30px 15px;
-    }
+.divider{
+    width:320px;
+    max-width:90%;
+    margin:35px auto;
+    opacity:.85;
+}
 
-    .container{
-      width:100%;
-      max-width:620px;
+.container{
+    width:100%;
+    max-width:700px;
+    margin:auto;
+    padding:40px 20px 80px;
+}
 
-      background:#111;
+.link-btn{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:16px;
 
-      border:1px solid #222;
+    width:100%;
+    height:88px;
 
-      border-radius:28px;
+    text-decoration:none;
+    color:#e4d2b2;
 
-      padding:40px 25px;
+    margin-bottom:22px;
 
-      text-align:center;
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
 
-      box-shadow:
-        0 0 40px rgba(0,0,0,0.6);
+    transition:.25s ease;
+}
+
+.link-btn:hover{
+    transform:translateY(-3px) scale(1.01);
+    filter:brightness(1.12);
+}
+
+.link-btn img.icon{
+    position:absolute;
+    left:28px;
+    width:28px;
+    height:28px;
+    object-fit:contain;
+    opacity:.95;
+}
+
+.link-btn span{
+    font-size:1.45rem;
+    letter-spacing:1px;
+}
+
+.card{
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
+        url("assets/card-bg.png");
+    background-size:cover;
+    border:1px solid rgba(212,184,135,.16);
+    border-radius:16px;
+    padding:30px;
+    margin-top:40px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(0,0,0,.35);
+}
+
+.card h2{
+    font-family:'Cinzel', serif;
+    margin-bottom:18px;
+    font-size:1.8rem;
+}
+
+.card p{
+    line-height:1.7;
+    font-size:1.1rem;
+    opacity:.92;
+}
+
+.footer{
+    margin-top:80px;
+    padding:70px 20px;
+    text-align:center;
+
+    background:
+        linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.92)),
+        url("assets/footer-bg.png");
+
+    background-size:cover;
+    background-position:center;
+    border-top:1px solid rgba(212,184,135,.12);
+}
+
+.footer p{
+    font-size:1rem;
+    letter-spacing:1px;
+    opacity:.75;
+}
+
+@media(max-width:700px){
+
+    h1{
+        font-size:2.1rem;
     }
 
     .profile-frame{
-      width:150px;
-      height:150px;
-
-      margin:0 auto 20px;
-
-      border-radius:50%;
-
-      padding:5px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #8d6b2f,
-          #e0c48d,
-          #8d6b2f
-        );
-
-      box-shadow:
-        0 0 25px rgba(224,196,141,0.15);
+        width:150px;
+        height:150px;
     }
 
-    .profile-img{
-      width:100%;
-      height:100%;
-
-      border-radius:50%;
-
-      object-fit:cover;
-
-      border:4px solid #111;
+    .link-btn{
+        height:78px;
     }
 
-    h1{
-      font-size:2.8rem;
-
-      margin-bottom:12px;
-
-      color:#f3d9a2;
-
-      letter-spacing:1px;
+    .link-btn span{
+        font-size:1.15rem;
     }
 
-    .divider{
-      width:180px;
-
-      margin:0 auto 24px;
-
-      opacity:0.8;
+    .link-btn img.icon{
+        width:24px;
+        height:24px;
+        left:20px;
     }
 
-    .tagline{
-      color:#b8b8b8;
+}
 
-      font-size:1rem;
-
-      margin-bottom:35px;
-
-      line-height:1.6;
-    }
-
-    .links{
-      display:flex;
-      flex-direction:column;
-
-      gap:16px;
-    }
-
-    .links a{
-      text-decoration:none;
-
-      color:white;
-
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.72),
-          rgba(0,0,0,0.72)
-        ),
-        url("./assets/images/button-5.png");
-
-      background-size:cover;
-      background-position:center;
-
-      border:1px solid rgba(255,255,255,0.08);
-
-      border-radius:16px;
-
-      padding:18px 20px;
-
-      transition:0.25s ease;
-
-      font-size:1rem;
-    }
-
-    .links a:hover{
-      transform:translateY(-3px);
-
-      border-color:#d6b57a;
-
-      box-shadow:
-        0 0 18px rgba(214,181,122,0.18);
-
-      color:#ffe8bb;
-    }
-
-    .link-content{
-      display:flex;
-
-      align-items:center;
-      justify-content:center;
-
-      gap:12px;
-    }
-
-    .icon{
-      width:22px;
-      height:22px;
-
-      object-fit:contain;
-    }
-
-    footer{
-      margin-top:35px;
-
-      color:#777;
-
-      font-size:0.9rem;
-    }
-
-    @media(max-width:600px){
-
-      h1{
-        font-size:2.1rem;
-      }
-
-      .container{
-        padding:35px 18px;
-      }
-
-      .links a{
-        font-size:0.95rem;
-        padding:16px;
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
-
 <body>
 
-  <div class="container">
+<section class="hero">
 
-    <div class="profile-frame">
+    <div class="hero-inner">
 
-      <img
-        class="profile-img"
-        src="./assets/images/profile.png"
-        alt="Christian Goblin"
-      />
+        <div class="profile-frame"></div>
+
+        <h1>CHRISTIAN GOBLIN</h1>
+
+        <p class="subtitle">
+            Faith • Creativity • Technology
+        </p>
+
+        <img class="divider" src="assets/divider-sunburst.PNG">
 
     </div>
 
-    <h1>Christian Goblin</h1>
+</section>
 
-    <img
-      class="divider"
-      src="./assets/images/divider-simple.PNG"
-      alt=""
-    />
+<div class="container">
 
-    <p class="tagline">
-      Christian Creator • Streaming • Community
+    <a class="link-btn"
+       href="https://christiangoblin.com/"
+       style='background-image:url("assets/button-1.png")'>
+
+        <img class="icon" src="assets/icon-cross.png">
+
+        <span>Main Website</span>
+
+    </a>
+
+    <a class="link-btn"
+       href="https://christiangoblin.com/cyber.html"
+       style='background-image:url("assets/button-2.png")'>
+
+        <img class="icon" src="assets/icon-shield.PNG">
+
+        <span>Cyber Division</span>
+
+    </a>
+
+    <a class="link-btn"
+       href="https://github.com/"
+       style='background-image:url("assets/button-3.png")'>
+
+        <img class="icon" src="assets/icon-dove.PNG">
+
+        <span>Projects & Code</span>
+
+    </a>
+
+    <a class="link-btn"
+       href="https://discord.com/"
+       style='background-image:url("assets/button-4.png")'>
+
+        <img class="icon" src="assets/icon-pray.PNG">
+
+        <span>Community</span>
+
+    </a>
+
+    <a class="link-btn"
+       href="https://www.youtube.com/"
+       style='background-image:url("assets/button-5.png")'>
+
+        <img class="icon" src="assets/icon-bible.PNG">
+
+        <span>Content & Media</span>
+
+    </a>
+
+    <img class="divider" src="assets/divider-thorns.PNG">
+
+    <div class="card">
+
+        <h2>About</h2>
+
+        <p>
+            Christian Goblin is a dark aesthetic Christian creative project
+            focused on technology, cybersecurity, design, media, and digital
+            identity. This page serves as a central hub for all platforms,
+            projects, and communities connected to the brand.
+        </p>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    <img class="divider" src="assets/divider-flourish.PNG">
+
+    <p>
+        © 2026 Christian Goblin
     </p>
 
-    <div class="links">
-
-      <a
-        href="https://www.instagram.com/hello.viewers.2026/"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-cross.png"
-            alt=""
-          />
-
-          <span>
-            Instagram — hello.viewers.2026
-          </span>
-
-        </div>
-
-      </a>
-
-      <a
-        href="https://www.instagram.com/christian_goblin"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-thorns.PNG"
-            alt=""
-          />
-
-          <span>
-            Instagram — christian_goblin
-          </span>
-
-        </div>
-
-      </a>
-
-      <a
-        href="https://www.tiktok.com/@christiangoblin"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-dove.PNG"
-            alt=""
-          />
-
-          <span>
-            TikTok
-          </span>
-
-        </div>
-
-      </a>
-
-      <a
-        href="https://www.youtube.com/@christian_goblin"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-shield.PNG"
-            alt=""
-          />
-
-          <span>
-            YouTube
-          </span>
-
-        </div>
-
-      </a>
-
-      <a
-        href="https://m.twitch.tv/christian_goblin/home"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-crown.png"
-            alt=""
-          />
-
-          <span>
-            Twitch
-          </span>
-
-        </div>
-
-      </a>
-
-      <a
-        href="https://ko-fi.com/christiangoblin"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-bible.PNG"
-            alt=""
-          />
-
-          <span>
-            Ko-fi
-          </span>
-
-        </div>
-
-      </a>
-
-      <a
-        href="https://cash.app/$TheChristianGoblin"
-        target="_blank"
-      >
-
-        <div class="link-content">
-
-          <img
-            class="icon"
-            src="./assets/images/icon-pray.PNG"
-            alt=""
-          />
-
-          <span>
-            Cash App
-          </span>
-
-        </div>
-
-      </a>
-
-    </div>
-
-    <footer>
-
-      <img
-        class="divider"
-        src="./assets/images/divider-thorns.PNG"
-        alt=""
-      />
-
-    </footer>
-
-  </div>
+</footer>
 
 </body>
 </html>
