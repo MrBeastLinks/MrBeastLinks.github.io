@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>Christian Goblin</title>
 
   <style>
@@ -15,14 +22,17 @@
 
     body{
       font-family:Georgia, serif;
+
       min-height:100vh;
 
       background:
-        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.92)),
-        url("./assets/images/hero-bg.png");
+        linear-gradient(
+          135deg,
+          #050505,
+          #111111,
+          #1a1a1a
+        );
 
-      background-size:cover;
-      background-position:center;
       background-attachment:fixed;
 
       color:#f3eee5;
@@ -65,12 +75,7 @@
       position:absolute;
       inset:0;
 
-      background:url("./assets/images/card-bg.png");
-
-      background-size:cover;
-      background-position:center;
-
-      opacity:0.15;
+      background:rgba(255,255,255,0.015);
 
       pointer-events:none;
     }
@@ -86,28 +91,40 @@
 
       margin:0 auto 20px;
 
-      background:url("./assets/images/profile-frame.png");
-
-      background-size:contain;
-      background-repeat:no-repeat;
-      background-position:center;
-
       display:flex;
       justify-content:center;
       align-items:center;
 
-      padding:24px;
+      padding:12px;
+
+      border-radius:50%;
+
+      border:2px solid rgba(219,193,142,0.35);
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(219,193,142,0.12),
+          rgba(0,0,0,0.4)
+        );
+
+      box-shadow:
+        0 0 25px rgba(219,193,142,0.12),
+        inset 0 0 20px rgba(0,0,0,0.7);
     }
 
     .profile-img{
-      width:125px;
-      height:125px;
+      width:140px;
+      height:140px;
 
       border-radius:50%;
 
       object-fit:cover;
 
       border:2px solid rgba(255,255,255,0.15);
+
+      box-shadow:
+        0 0 20px rgba(0,0,0,0.5);
     }
 
     h1{
@@ -119,7 +136,8 @@
 
       margin-bottom:10px;
 
-      text-shadow:0 0 12px rgba(219,193,142,0.2);
+      text-shadow:
+        0 0 12px rgba(219,193,142,0.2);
     }
 
     .divider{
@@ -156,7 +174,10 @@
       color:#f3eee5;
 
       background:
-        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+        linear-gradient(
+          rgba(0,0,0,0.72),
+          rgba(0,0,0,0.82)
+        ),
         url("./assets/images/card-bg.png");
 
       background-size:cover;
@@ -176,11 +197,15 @@
     }
 
     .links a:hover{
-      transform:translateY(-4px) scale(1.01);
+      transform:
+        translateY(-4px)
+        scale(1.01);
 
-      border-color:rgba(219,193,142,0.45);
+      border-color:
+        rgba(219,193,142,0.45);
 
-      box-shadow:0 0 18px rgba(219,193,142,0.12);
+      box-shadow:
+        0 0 18px rgba(219,193,142,0.12);
 
       color:#fff7e8;
     }
@@ -239,18 +264,20 @@
       }
 
       .profile-img{
-        width:100px;
-        height:100px;
+        width:110px;
+        height:110px;
       }
 
       .links a{
         padding:16px;
+
         font-size:0.95rem;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
@@ -261,7 +288,8 @@
 
       <div class="profile-frame">
 
-        <!-- YOUR PROFILE IMAGE -->
+        <!-- CHANGE THIS TO YOUR PROFILE IMAGE -->
+
         <img
           class="profile-img"
           src="./assets/images/profile.png"
@@ -279,102 +307,174 @@
       />
 
       <p class="tagline">
-        Christian Creator • Streaming • Dark Faith Aesthetic
+        Christian Creator • Streaming • Faith • Community
       </p>
 
       <div class="links">
 
-        <a href="https://www.instagram.com/hello.viewers.2026/" target="_blank">
+        <a
+          href="https://www.instagram.com/hello.viewers.2026/"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-cross.png" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-cross.png"
+              alt=""
+            />
 
-            <span>Instagram — hello.viewers.2026</span>
+            <span>
+              Instagram — hello.viewers.2026
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://www.instagram.com/christian_goblin?igsh=MWMxdm03bWx2N2tneg%3D%3D" target="_blank">
+        <a
+          href="https://www.instagram.com/christian_goblin?igsh=MWMxdm03bWx2N2tneg%3D%3D"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-thorns.PNG" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-thorns.PNG"
+              alt=""
+            />
 
-            <span>Instagram — christian_goblin</span>
+            <span>
+              Instagram — christian_goblin
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://www.tiktok.com/@christiangoblin" target="_blank">
+        <a
+          href="https://www.tiktok.com/@christiangoblin"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-dove.PNG" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-dove.PNG"
+              alt=""
+            />
 
-            <span>TikTok</span>
+            <span>
+              TikTok
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://www.youtube.com/@christian_goblin?app=desktop&sub_confirmation=1" target="_blank">
+        <a
+          href="https://www.youtube.com/@christian_goblin?app=desktop&sub_confirmation=1"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-shield.PNG" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-shield.PNG"
+              alt=""
+            />
 
-            <span>YouTube</span>
+            <span>
+              YouTube
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://m.twitch.tv/christian_goblin/home" target="_blank">
+        <a
+          href="https://m.twitch.tv/christian_goblin/home"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-crown.png" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-crown.png"
+              alt=""
+            />
 
-            <span>Twitch</span>
+            <span>
+              Twitch
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://www.patreon.com/profile/creators?u=152523171&utm_campaign=creatorshare_creator" target="_blank">
+        <a
+          href="https://www.patreon.com/profile/creators?u=152523171&utm_campaign=creatorshare_creator"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-pray.PNG" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-pray.PNG"
+              alt=""
+            />
 
-            <span>Patreon</span>
+            <span>
+              Patreon
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://ko-fi.com/christiangoblin" target="_blank">
+        <a
+          href="https://ko-fi.com/christiangoblin"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-bible.PNG" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-bible.PNG"
+              alt=""
+            />
 
-            <span>Ko-fi</span>
+            <span>
+              Ko-fi
+            </span>
 
           </div>
 
         </a>
 
-        <a href="https://cash.app/$TheChristianGoblin" target="_blank">
+        <a
+          href="https://cash.app/$TheChristianGoblin"
+          target="_blank"
+        >
 
           <div class="link-content">
 
-            <img class="icon" src="./assets/images/icon-cross.png" alt="">
+            <img
+              class="icon"
+              src="./assets/images/icon-cross.png"
+              alt=""
+            />
 
-            <span>Cash App</span>
+            <span>
+              Cash App
+            </span>
 
           </div>
 
@@ -390,6 +490,8 @@
           alt=""
         />
 
+        © 2026 Christian Goblin
+
       </footer>
 
     </div>
@@ -397,4 +499,5 @@
   </div>
 
 </body>
+
 </html>
