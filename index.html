@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="UTF-8" />
@@ -21,206 +20,152 @@
     }
 
     body{
-      font-family:Georgia, serif;
+      font-family:Arial, Helvetica, sans-serif;
 
       min-height:100vh;
 
       background:
-        linear-gradient(
-          135deg,
-          #050505,
-          #111111,
-          #1a1a1a
-        );
+        radial-gradient(circle at top, #1b1b1b 0%, #090909 70%);
 
-      background-attachment:fixed;
-
-      color:#f3eee5;
+      color:white;
 
       display:flex;
       justify-content:center;
       align-items:center;
 
-      padding:40px 20px;
+      padding:30px 15px;
     }
 
     .container{
       width:100%;
-      max-width:720px;
+      max-width:620px;
 
-      background:rgba(8,8,8,0.82);
+      background:#111;
 
-      border:1px solid rgba(190,160,110,0.25);
+      border:1px solid #222;
 
-      border-radius:24px;
+      border-radius:28px;
 
-      padding:45px 30px;
-
-      box-shadow:
-        0 0 40px rgba(0,0,0,0.7),
-        0 0 20px rgba(190,160,110,0.08);
-
-      backdrop-filter:blur(8px);
+      padding:40px 25px;
 
       text-align:center;
 
-      position:relative;
-
-      overflow:hidden;
-    }
-
-    .container::before{
-      content:"";
-
-      position:absolute;
-      inset:0;
-
-      background:rgba(255,255,255,0.015);
-
-      pointer-events:none;
-    }
-
-    .content{
-      position:relative;
-      z-index:2;
+      box-shadow:
+        0 0 40px rgba(0,0,0,0.6);
     }
 
     .profile-frame{
-      width:200px;
-      height:200px;
+      width:150px;
+      height:150px;
 
       margin:0 auto 20px;
 
-      display:flex;
-      justify-content:center;
-      align-items:center;
-
-      padding:12px;
-
       border-radius:50%;
 
-      border:2px solid rgba(219,193,142,0.35);
+      padding:5px;
 
       background:
-        radial-gradient(
-          circle at top,
-          rgba(219,193,142,0.12),
-          rgba(0,0,0,0.4)
+        linear-gradient(
+          135deg,
+          #8d6b2f,
+          #e0c48d,
+          #8d6b2f
         );
 
       box-shadow:
-        0 0 25px rgba(219,193,142,0.12),
-        inset 0 0 20px rgba(0,0,0,0.7);
+        0 0 25px rgba(224,196,141,0.15);
     }
 
     .profile-img{
-      width:140px;
-      height:140px;
+      width:100%;
+      height:100%;
 
       border-radius:50%;
 
       object-fit:cover;
 
-      border:2px solid rgba(255,255,255,0.15);
-
-      box-shadow:
-        0 0 20px rgba(0,0,0,0.5);
+      border:4px solid #111;
     }
 
     h1{
-      font-size:3rem;
+      font-size:2.8rem;
 
-      color:#dbc18e;
+      margin-bottom:12px;
 
-      letter-spacing:2px;
+      color:#f3d9a2;
 
-      margin-bottom:10px;
-
-      text-shadow:
-        0 0 12px rgba(219,193,142,0.2);
+      letter-spacing:1px;
     }
 
     .divider{
-      width:240px;
-      max-width:90%;
+      width:180px;
 
-      margin:18px auto 24px;
+      margin:0 auto 24px;
 
       opacity:0.8;
     }
 
     .tagline{
-      color:#b7afa0;
+      color:#b8b8b8;
 
-      font-size:1.05rem;
-
-      line-height:1.7;
+      font-size:1rem;
 
       margin-bottom:35px;
 
-      letter-spacing:1px;
+      line-height:1.6;
     }
 
     .links{
       display:flex;
       flex-direction:column;
 
-      gap:18px;
+      gap:16px;
     }
 
     .links a{
       text-decoration:none;
 
-      color:#f3eee5;
+      color:white;
 
       background:
         linear-gradient(
           rgba(0,0,0,0.72),
-          rgba(0,0,0,0.82)
+          rgba(0,0,0,0.72)
         ),
-        url("./assets/images/card-bg.png");
+        url("./assets/images/button-5.png");
 
       background-size:cover;
       background-position:center;
 
-      border:1px solid rgba(190,160,110,0.18);
+      border:1px solid rgba(255,255,255,0.08);
 
-      border-radius:14px;
+      border-radius:16px;
 
       padding:18px 20px;
 
-      transition:0.3s ease;
+      transition:0.25s ease;
 
-      position:relative;
-
-      overflow:hidden;
+      font-size:1rem;
     }
 
     .links a:hover{
-      transform:
-        translateY(-4px)
-        scale(1.01);
+      transform:translateY(-3px);
 
-      border-color:
-        rgba(219,193,142,0.45);
+      border-color:#d6b57a;
 
       box-shadow:
-        0 0 18px rgba(219,193,142,0.12);
+        0 0 18px rgba(214,181,122,0.18);
 
-      color:#fff7e8;
+      color:#ffe8bb;
     }
 
     .link-content{
       display:flex;
 
-      justify-content:center;
       align-items:center;
+      justify-content:center;
 
       gap:12px;
-
-      position:relative;
-
-      z-index:2;
     }
 
     .icon{
@@ -228,50 +173,29 @@
       height:22px;
 
       object-fit:contain;
-
-      opacity:0.9;
     }
 
     footer{
-      margin-top:40px;
+      margin-top:35px;
 
-      color:#847a6b;
+      color:#777;
 
       font-size:0.9rem;
     }
 
-    .footer-divider{
-      width:230px;
-
-      margin-bottom:18px;
-
-      opacity:0.7;
-    }
-
     @media(max-width:600px){
 
-      .container{
-        padding:35px 20px;
-      }
-
       h1{
-        font-size:2.2rem;
+        font-size:2.1rem;
       }
 
-      .profile-frame{
-        width:160px;
-        height:160px;
-      }
-
-      .profile-img{
-        width:110px;
-        height:110px;
+      .container{
+        padding:35px 18px;
       }
 
       .links a{
-        padding:16px;
-
         font-size:0.95rem;
+        padding:16px;
       }
 
     }
@@ -284,220 +208,190 @@
 
   <div class="container">
 
-    <div class="content">
+    <div class="profile-frame">
 
-      <div class="profile-frame">
+      <img
+        class="profile-img"
+        src="./assets/images/profile.png"
+        alt="Christian Goblin"
+      />
 
-        <!-- CHANGE THIS TO YOUR PROFILE IMAGE -->
+    </div>
 
-        <img
-          class="profile-img"
-          src="./assets/images/profile.png"
-          alt="Christian Goblin"
-        />
+    <h1>Christian Goblin</h1>
 
-      </div>
+    <img
+      class="divider"
+      src="./assets/images/divider-simple.PNG"
+      alt=""
+    />
 
-      <h1>Christian Goblin</h1>
+    <p class="tagline">
+      Christian Creator • Streaming • Community
+    </p>
+
+    <div class="links">
+
+      <a
+        href="https://www.instagram.com/hello.viewers.2026/"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-cross.png"
+            alt=""
+          />
+
+          <span>
+            Instagram — hello.viewers.2026
+          </span>
+
+        </div>
+
+      </a>
+
+      <a
+        href="https://www.instagram.com/christian_goblin"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-thorns.PNG"
+            alt=""
+          />
+
+          <span>
+            Instagram — christian_goblin
+          </span>
+
+        </div>
+
+      </a>
+
+      <a
+        href="https://www.tiktok.com/@christiangoblin"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-dove.PNG"
+            alt=""
+          />
+
+          <span>
+            TikTok
+          </span>
+
+        </div>
+
+      </a>
+
+      <a
+        href="https://www.youtube.com/@christian_goblin"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-shield.PNG"
+            alt=""
+          />
+
+          <span>
+            YouTube
+          </span>
+
+        </div>
+
+      </a>
+
+      <a
+        href="https://m.twitch.tv/christian_goblin/home"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-crown.png"
+            alt=""
+          />
+
+          <span>
+            Twitch
+          </span>
+
+        </div>
+
+      </a>
+
+      <a
+        href="https://ko-fi.com/christiangoblin"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-bible.PNG"
+            alt=""
+          />
+
+          <span>
+            Ko-fi
+          </span>
+
+        </div>
+
+      </a>
+
+      <a
+        href="https://cash.app/$TheChristianGoblin"
+        target="_blank"
+      >
+
+        <div class="link-content">
+
+          <img
+            class="icon"
+            src="./assets/images/icon-pray.PNG"
+            alt=""
+          />
+
+          <span>
+            Cash App
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+    <footer>
 
       <img
         class="divider"
-        src="./assets/images/divider-cross.PNG"
+        src="./assets/images/divider-thorns.PNG"
         alt=""
       />
 
-      <p class="tagline">
-        Christian Creator • Streaming • Faith • Community
-      </p>
-
-      <div class="links">
-
-        <a
-          href="https://www.instagram.com/hello.viewers.2026/"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-cross.png"
-              alt=""
-            />
-
-            <span>
-              Instagram — hello.viewers.2026
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://www.instagram.com/christian_goblin?igsh=MWMxdm03bWx2N2tneg%3D%3D"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-thorns.PNG"
-              alt=""
-            />
-
-            <span>
-              Instagram — christian_goblin
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://www.tiktok.com/@christiangoblin"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-dove.PNG"
-              alt=""
-            />
-
-            <span>
-              TikTok
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://www.youtube.com/@christian_goblin?app=desktop&sub_confirmation=1"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-shield.PNG"
-              alt=""
-            />
-
-            <span>
-              YouTube
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://m.twitch.tv/christian_goblin/home"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-crown.png"
-              alt=""
-            />
-
-            <span>
-              Twitch
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://www.patreon.com/profile/creators?u=152523171&utm_campaign=creatorshare_creator"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-pray.PNG"
-              alt=""
-            />
-
-            <span>
-              Patreon
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://ko-fi.com/christiangoblin"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-bible.PNG"
-              alt=""
-            />
-
-            <span>
-              Ko-fi
-            </span>
-
-          </div>
-
-        </a>
-
-        <a
-          href="https://cash.app/$TheChristianGoblin"
-          target="_blank"
-        >
-
-          <div class="link-content">
-
-            <img
-              class="icon"
-              src="./assets/images/icon-cross.png"
-              alt=""
-            />
-
-            <span>
-              Cash App
-            </span>
-
-          </div>
-
-        </a>
-
-      </div>
-
-      <footer>
-
-        <img
-          class="footer-divider"
-          src="./assets/images/divider-flourish.PNG"
-          alt=""
-        />
-
-        © 2026 Christian Goblin
-
-      </footer>
-
-    </div>
+    </footer>
 
   </div>
 
 </body>
-
 </html>
